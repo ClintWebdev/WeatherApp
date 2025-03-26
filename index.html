@@ -3,20 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="weatherApp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for improved icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <form action="" class="weatherForm">
-    <label for="cityInput">Enter City</label><br>
-    <input type="text" class="cityInput" ><br>
-    <button type="submit">Get weather</button><br><br>
+  <div class="background-animation"></div>
   
+  <div class="container">
+    <h1 class="app-title"><i class="fas fa-cloud-sun"></i> Weather Forecast</h1>
+    
+    <form action="" class="weatherForm">
+      <div class="form-group">
+        <label for="cityInput">Enter City</label>
+        <div class="input-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="cityInput" class="cityInput" placeholder="e.g. Tandag, Cebu, Tokyo">
+        </div>
+      </div>
+      <button type="submit" class="search-btn">
+        <i class="fas fa-cloud-sun-rain"></i> Get Weather
+      </button>
+    </form>
 
-  <div class="card" style="display: none;">
-   
+    <div class="card" style="display: none;">
+      <!-- Weather data will be inserted here by JavaScript -->
+    </div>
   </div>
-</form>
-    <script src="weatherApp.js"></script>
+  
+  <footer>
+    <p>Weather data provided by OpenWeather API</p>
+    <p class="developer-credit">Developed by Clintstone Ubuan</p>
+  </footer>
+  
+  <script src="weatherApp.js"></script>
 </body>
 </html>
